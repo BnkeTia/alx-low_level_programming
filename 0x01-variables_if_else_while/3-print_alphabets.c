@@ -1,20 +1,23 @@
 #include <stdio.h>
 /**
  * main - Point of Entry
- * Return: 0 (complete)\
+ * Return: 0 (complete)
  */
 
 int main(void)
 {
-	int x;
+	int n;
 
-	for (x = 97; x <= 122; x++)
+	for (n = 97; n <= 122; n++)
+	{
+		putchar(n);
+	}
 
-		putchar(x);
+	for (n = 65; n <= 90; n++)
+	{
 
-	for (x = 65; x <= 90; x++)
-
-		putchar(x);
+		putchar(n);
+	}
 
 	putchar('\n');
 
