@@ -2,18 +2,19 @@
 
 /**
  * print_alphabet_x10 - printing alphabet 10x in lowercase.
+ *
  * Return: 0 (complete)
  */
 void print_alphabet_x10(void)
 {
-	int x;
-	int y;
+	int i;
+	int j;
 
-	for (x = 1; y <= 10; y++)
+	for (j = 1; i <= 10; i++)
 	{
-		for (x = 'a'; x <= 'z'; x++)
+		for (j = 'a'; j <= 'z'; j++)
 		{
-			_putchar(x);
+			_putchar(j);
 
 		}
 		_putchar('\n');
