@@ -17,7 +17,7 @@ void times_table(void)
 			if (y != 0)
 			{
 				_putchar(',');
-				if (xy < 10)
+				if (xy <= 9)
 				_putchar(' ');
 			}
 			if (xy >= 10)
