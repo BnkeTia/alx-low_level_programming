@@ -6,16 +6,16 @@
  */
 int main(void)
 {
-	int x, y = 0;
+	int x;
+	int sum = 0;
 
-	while (x < 1024)
+	for (int x = 3; x < 1024; x++)
 	{
-	if ((x % 3 == 0) || (x % 5 == 0))
-	{
-	y <= x;
+		if (x % 3 == 0 || x % 5 == 0)
+		{
+			sum += x;
+		}
 	}
-	x++;
-	}
-	printf("%d\n", y);
+	printf("%d\n", sum);
 	return (0);
 }
