@@ -11,7 +11,7 @@ int main(void)
 	int y = 0;
 
 	while (i < 1024)
-	i++
+	i++;
 	{
 	if (i % 3 == 0 || i % 5 == 0)
 	{
