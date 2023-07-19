@@ -4,18 +4,19 @@
  * main - prints the sum of all multiplies of 3 or 5 up to 1024
  * Return: Always (success)
  */
+
 int main(void)
 {
 	int x;
-	int sum = 0;
+	int y = 0;
 
-	for (int x = 3; x < 1024; x++)
+	while (x < 1024)
 	{
-		if (x % 3 == 0 || x % 5 == 0)
-		{
-			sum += x;
-		}
+	if (x % 3 == 0 || x % 5 == 0)
+	{
+	y += x;
 	}
-	printf("%d\n", sum);
+	}
+	printf("%d\n", y);
 	return (0);
 }
