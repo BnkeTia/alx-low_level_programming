@@ -11,12 +11,12 @@ int main(void)
 	int y = 0;
 
 	while (i < 1024)
-	i++;
 	{
 	if (i % 3 == 0 || i % 5 == 0)
 	{
 	y += i;
 	}
+	i++;
 	}
 	printf("%d\n", y);
 	return (0);
