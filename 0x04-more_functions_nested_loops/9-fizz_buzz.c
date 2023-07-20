@@ -22,6 +22,8 @@ int main(void)
 		{
 			printf("Buzz ");
 		}
+		if (x == 100)
+			printf("Buzz");
 		else
 		{
 			printf("%d ", x);
