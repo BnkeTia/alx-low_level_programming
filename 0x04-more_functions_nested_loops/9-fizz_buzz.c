@@ -15,6 +15,7 @@ int main(void)
 			printf("FizzBuzz ");
 		}
 		else if (x % 3 == 0)
+
 		{
 			printf("Fizz ");
 		}
@@ -22,13 +23,14 @@ int main(void)
 		{
 			printf("Buzz ");
 		}
-		if (x == 100)
-			printf("Buzz");
+
 		else
 		{
 			printf("%d ", x);
 		}
+
 	}
 	printf("\n");
+
 	return (0);
 }
