@@ -1,5 +1,4 @@
 #include "main.h"
-#include <ctype.h>
 
 /**
  * puts2 - Prints every other character of a string, followed by a new line.
@@ -7,16 +6,12 @@
  */
 void puts2(char *str)
 {
-	int x = 0;
+	int i;
 
-	while (str[x] != '\0')
+	while (str[i] != '\0')
 	{
-		if (isalpha(str[x]))
-		{
-		_putchar(str[x]);
-		x += 2;
-		}
-		x++;
+		_putchar(str[i]);
+		i += 2;
 	}
 
 	_putchar('\n');
