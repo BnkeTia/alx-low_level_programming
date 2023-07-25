@@ -7,7 +7,7 @@
  *
  * Return: Pointer to the destination.
  */
-char *_strcpy(char *dest, const char *src)
+char *_strcpy(char *dest, char *src)
 {
 	int x;
 
