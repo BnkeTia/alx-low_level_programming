@@ -9,14 +9,14 @@
 char *rot13(char *str)
 {
 	int x;
-	int y = 0;
-	char alpha1[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char alpharot13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+	int y;
+	char alpha1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char alpharot13[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	for (x = 0; str[x] != '\0'; x++)
 	{
 
-		while (alpha1[y] != '\0')
+		for (y = 0; y < 52; y++)
 		{
 			if (alpha1[y] == str[x])
 			{
