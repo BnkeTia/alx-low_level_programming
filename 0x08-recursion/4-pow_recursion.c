@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * _pow_recursion - raises x to the power of y
- * @x: Number Integer
- * @y: Power or superscript
- * Return: 1 (completed)
- */
+*_pow_recursion - raises x to the power of y
+*@x: Number Integer
+*@y: Power or superscript
+*Return: 1 (completed)
+*/
 
 int _pow_recursion(int x, int y)
 {
