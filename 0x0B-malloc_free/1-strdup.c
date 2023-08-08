@@ -13,6 +13,10 @@ char *_strdup(char *str)
 	int i = 0;
 	char *copy;
 
+	if (str == NULL)
+
+		return (NULL);
+
 	while (str[size] != '\0')
 	{
 		size++;
@@ -21,9 +25,6 @@ char *_strdup(char *str)
 	copy = (char *)malloc((size + 1) * sizeof(char));
 	if (copy == NULL)
 	{
-		for (i = 0; i < 21; i++)
-			_putchar("failed to allocate memory\n"[i]);
-
 		return (NULL);
 	}
 
