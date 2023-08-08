@@ -22,7 +22,7 @@ char *_strdup(char *str)
 	if (copy == NULL)
 	{
 		for (i = 0; i < 21; i++)
-			_putchar("failed to allocate memory\n" [i]);
+			_putchar("failed to allocate memory\n"[i]);
 
 		return (NULL);
 	}
