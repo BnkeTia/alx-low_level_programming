@@ -1,94 +1,99 @@
-#include <stdio.h>
 #include <stdlib.h>
-/**
- * _isdigit - A function that multiplies two numbers
- * @str: pointer to a string
- * Return: void
- */
+#include <stdio.h>
+#include "main.h"
 
-int _isdigit(char *str)
+/**
+ * is_digit - A function that checks if a string contains a non-digit char
+ * @s: string to be evaluated
+ *
+ * Return: 0 if a non-digit is found, 1 otherwise
+ */
+int is_digit(char *s)
 {
-	while (*str)
+	int i = 0;
+
+	while (s[i])
 	{
-		if (*str < '0' || *str > '9')
+		if (s[i] < '0' || s[i] > '9')
 			return (0);
-		str++;
+		i++;
 	}
 	return (1);
 }
 
 /**
- * _strlen - A function that calculate the length of a string
- * @str: input string
- * Return: string length
+ * _strlen - A function that returns the length of a string
+ * @s: string to evaluate
+ *
+ * Return: the length of the string
  */
-
-int _strlen(char *str)
+int _strlen(char *s)
 {
-	int len = 0;
+	int i = 0;
 
-	while (str[len])
-		len++;
-	return (len);
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
 
 /**
- * _mul - a function that multiplies two intrgers.
- * @num1: first number
- * @num2: second number
+ * errors - handles errors for main
  */
-
-void _mul(char *num1, char *num2)
+void errors(void)
 {
-	int lenA, lenB, len, a = 0, b = 0;
-	int *res;
-	int d1, d2;
-
-	lenA = _strlen(num1);
-	lenB = _strlen(num2);
-	len = lenA + lenB;
-	res = calloc(len, sizeof(int));
-
-	if (!res)
-	{
-		perror("Memory allocation failed");
-		exit(1);
-	}
-	for (a = lenA - 1; a >= 0; a--)
-	{
-		for (b = lenB - 1; b >= 0; b--)
-		{
-			d1 = num1[a] - '0';
-			d2 = num2[b] - '0';
-			res[a + b + 1] += d1 * d2;
-			res[a + b] += res[a + b + 1] / 10;
-			res[a + b + 1] %= 10;
-		}
-	}
-
-	while (a < len - 1 && res[b] == 0)
-		a++;
-	while (a < len)
-		printf("%d", res[a++]);
-	printf("\n");
-	free(res);
+	printf("Error\n");
+	exit(98);
 }
 
 /**
- * main - point of entry
+ * main - A function that multiplies two positive numbers
  * @argc: number of arguments
- * @argv: array of pointers
- * Return: 0 (complete)
+ * @argv: array of arguments
+ *
+ * Return: always 0 (Success)
  */
-
 int main(int argc, char *argv[])
 {
-	if (argc != 3 || !_isdigit(argv[1]) || !_isdigit(argv[2]))
-	{
-		printf("Error\n");
-		return (98);
-	}
+	char *s1, *s2;
+	int len1, len2, len, i, carry, digit1, digit2, *result, a = 0;
 
-	_mul(argv[1], argv[2]);
+	s1 = argv[1], s2 = argv[2];
+	if (argc != 3 || !is_digit(s1) || !is_digit(s2))
+		errors();
+	len1 = _strlen(s1);
+	len2 = _strlen(s2);
+	len = len1 + len2 + 1;
+	result = malloc(sizeof(int) * len);
+	if (!result)
+		return (1);
+	for (i = 0; i <= len1 + len2; i++)
+		result[i] = 0;
+	for (len1 = len1 - 1; len1 >= 0; len1--)
+	{
+		digit1 = s1[len1] - '0';
+		carry = 0;
+		for (len2 = _strlen(s2) - 1; len2 >= 0; len2--)
+		{
+			digit2 = s2[len2] - '0';
+			carry += result[len1 + len2 + 1] + (digit1 * digit2);
+			result[len1 + len2 + 1] = carry % 10;
+			carry /= 10;
+		}
+		if (carry > 0)
+			result[len1 + len2 + 1] += carry;
+	}
+	for (i = 0; i < len - 1; i++)
+	{
+		if (result[i])
+			a = 1;
+		if (a)
+			_putchar(result[i] + '0');
+	}
+	if (!a)
+		_putchar('0');
+	_putchar('\n');
+	free(result);
 	return (0);
 }
