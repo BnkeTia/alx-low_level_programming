@@ -4,14 +4,13 @@
 
 /**
  * print_list - A function that prints the elements of a linked list
- *@str: string
- *@len: length of string
+ *@h: pointer to head
  * Return: The number of nodes
  */
 
 size_t print_list(const list_t *h)
 {
-	size_t nodes_t = 0;
+	size_t nodes_num = 0;
 
 	while (h != NULL)
 	{
@@ -21,7 +20,8 @@ size_t print_list(const list_t *h)
 			_printf("[%u] %s\n", h->len, h->str);
 
 		h = h->next;
-		nodes_t++;
+
+		nodes_num++;
 	}
-	return (nodes_t);
+	return (nodes_num);
 }
