@@ -20,6 +20,7 @@ struct list_s
 
 typedef struct list_s list_t;
 
+int _printf(const char *format, ...);
 
 /* Declaring function prototypes*/
 size_t print_list(const list_t *h);
