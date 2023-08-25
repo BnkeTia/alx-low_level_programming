@@ -1,5 +1,6 @@
 section .data
-	hello db "Hello, Holberton", 10, 0  ; Null-terminated string with newline
+	hello db "Hello, Holberton", 0
+	fmt db "%s\n", 0
 
 section .text
 	global main
@@ -8,7 +9,8 @@ section .text
 main:
 	push rdi            ; Preserve registers
 	push rsi
-	lea rdi, [hello]    ; Load address of the string
+	lea rsi, [hello]    ; Load address of the string
+	lea rdi, [fmt]      ; Load format string
 	xor rax, rax        ; Clear RAX for printf return value
 	call printf         ; Call printf
 	pop rsi             ; Restore registers
