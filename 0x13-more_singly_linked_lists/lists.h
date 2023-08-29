@@ -5,18 +5,20 @@
 #include <stddef.h>
 #include <stdio.h>
 
+
 /**
- * struct listint_s - defines the structure of the linked list.
- * @node_value: integer field that hold the value of a node in the list.
- * @next: pointer to the next element in the linked list.
+ * struct listint_s - singly linked list
+ * @n: integer
+ * @next: points to the next node
+ *
+ * Description: singly linked list node structure
  */
 typedef struct listint_s
 {
 	int n;
-
 	struct listint_s *next;
-}
-listint_t;
+} listint_t;
+
 
 /* necessary function prototypes */
 size_t print_listint(const listint_t *h);
