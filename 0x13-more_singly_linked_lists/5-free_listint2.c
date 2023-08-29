@@ -10,7 +10,7 @@ void free_listint2(listint_t **head)
 	/* declaration of the current node that needs to be freed */
 	listint_t *nC;
 
-	if (*head == NULL)
+	if (head == NULL)
 		return;
 
 	while (*head != NULL)
