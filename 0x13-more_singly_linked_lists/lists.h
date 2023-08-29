@@ -15,7 +15,8 @@ typedef struct listint_s
 	int node_value;
 
 	struct listint_s *next;
-} listint_t;
+}
+listint_t;
 
 /* necessary function prototypes */
 size_t print_listint(const listint_t *h);
@@ -42,4 +43,4 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index);
 
 
 
-#endif /* LISTS_H */
+#endif
