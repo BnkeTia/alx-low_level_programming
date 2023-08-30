@@ -7,7 +7,7 @@
  * @nP: pointer to the previuos node.
  * Return: A pointer to the first node of the reversed list.
  */
-listint_t *reverse_listint_recursive(listint_t *nC, *nP)
+listint_t *reverse_listint_recursive(listint_t *nC, listint_t *nP)
 {
 	listint_t *next;
 
