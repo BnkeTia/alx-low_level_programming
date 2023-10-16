@@ -13,7 +13,7 @@ int add(int a, int b)
 
 
 /**
- * subtract - A function that returns the difference of two numbers.
+ * subt - A function that returns the difference of two numbers.
  * @a: First number
  * @b: second number
  * Return: the subtraction result
@@ -25,7 +25,7 @@ int sub(int a, int b)
 
 
 /**
- * mult - A function that returns the product of two numbers.
+ * mul - A function that returns the product of two numbers.
  * @a: First number to be multiplied
  * @b: second number to be multiplied
  * Return: the product of multiplication of two numbers
