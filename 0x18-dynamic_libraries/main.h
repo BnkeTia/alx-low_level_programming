@@ -9,7 +9,7 @@
 int add(int a, int b);
 int subtract(int a, int b);
 int mult(int a, int b);
-div_t div(int a, int b);
+div_t divi(int a, int b);
 int mod(int a, int b);
 
 /* function prototype of libdynamic files */

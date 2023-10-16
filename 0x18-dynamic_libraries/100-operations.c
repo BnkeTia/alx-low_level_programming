@@ -42,7 +42,7 @@ int mul(int a, int b)
  * @b: second number
  * Return: division value
  */
-div_t div(int a, int b)
+div_t divi(int a, int b)
 {
 	div_t result = div(a, b);
 
