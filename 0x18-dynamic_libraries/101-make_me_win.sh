@@ -1,3 +1,3 @@
 #!/bin/bash
-gcc -shared -o myprintf.so -fPIC giga.c
-export LD_PRELOAD=./myprintf.so:$LD_LIBRARY_PATH
+gcc -shared -o opana.so -fPIC giga.c
+export LD_PRELOAD=./opana.so:$LD_LIBRARY_PATH
