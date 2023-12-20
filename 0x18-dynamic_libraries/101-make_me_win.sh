@@ -1,3 +1,3 @@
 #!/bin/bash
-gcc -shared -o win.so -fPIC gmcrack.c
-export LD_PRELOAD=./win.so:$LD_LIBRARY_PATH
+gcc -shared -o wine.so -fPIC gmcrack.c
+export LD_PRELOAD=./wine.so:$LD_LIBRARY_PATH
