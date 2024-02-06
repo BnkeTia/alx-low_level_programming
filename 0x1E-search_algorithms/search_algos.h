@@ -1,0 +1,6 @@
+#ifndef BISKIT_SEARCH_ALGOS_H
+#define BISKIT_SEARCH_ALGOS_H
+
+
+
+#endif /* BISKIT_SEARCH_ALGOS_H */
