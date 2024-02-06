@@ -1,4 +1,6 @@
 # C IS FUN
+
+![small c code](https://e0.pxfuel.com/wallpapers/260/458/desktop-wallpaper-programming-c-programming-funny-coding-thumbnail.jpg)
 ## AN ALX REPOSITORY ON CONCEPTS WITHIN THE C LOW LEVEL LANGUAGE
 ## Requirements
 ### General
