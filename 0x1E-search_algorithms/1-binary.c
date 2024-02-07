@@ -21,21 +21,24 @@ int binary_search(int *array, size_t size, int value)
 
 	while (back <= front)
 	{
+		mid = (back + front) / 2;
 		printf("Searching subarray: ");
+
 		for (i = back; i <= front; i++)
 		{
-			printf("%d ", array[i]);
+			if (i == front)
+				printf("%d\n", array[i]);
+			else
+				printf("%d, ", array[i]);
 		}
-		printf("\n");
 
-		mid = back + (front - back) / 2;
 
-		if (array[mid] == value)
-			return (mid);
-		else if (array[mid] < value)
+		if (array[mid] < value)
 			back = mid + 1;
-		else
+		else if (array[mid] > value)
 			front = mid - 1;
+		else
+			return (mid);
 	}
 	return (-1);
 }
