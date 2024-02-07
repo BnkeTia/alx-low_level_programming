@@ -1,20 +1,49 @@
-#include "search_algos"
+#include "search_algos.h"
 
 /**
-* jump_search - A function that searches for a value in a sorted array
-* of integers
-* @array: pointer to the array of integers
-* @size: number of elements in the array
-* @value: integer value to search for.
-* Return: Index of the value or -1 if otherwise.
-*/
+ * jump_search - A fuunction that searches for a value in a sorted array
+ * of integers
+ * @array: Array to search through
+ * @size: Size of the array
+ * @value: Value to search
+ * Return: Index of value, -1 if otherwise
+ */
 
-int jumo_search(int *array, size_t size, int value)
+int jump_search(int *array, size_t size, int value)
 {
-	size_t down, up;
 	size_t jump = sqrt(size);
+	size_t high, low;
 
 	if (array == NULL || size == 0)
 		return (-1);
 
-	for (up = 0; up < 
+	for (high = 0; high < size && array[high] < value; low = high,
+	     high += jump)
+		printf("Value checked array[%lu] = [%d]\n", high, array[high]);
+
+	printf("Value found between indexes [%lu] and [%lu]\n", low, high);
+
+	for (; low <= min(high, size - 1); low++)
+	{
+		printf("Value checked array[%lu] = [%d]\n", low, array[low]);
+		if (array[low] == value)
+			return (low);
+	}
+	return (-1);
+
+}
+
+/**
+ * min - A function that finds the minimum of 2 numbers
+ * @n1: First number
+ * @n2: Second number
+ * Return: Min or either if equal
+ */
+
+size_t min(size_t n1, size_t n2)
+{
+	if (n1 <= n2)
+		return (n1);
+	else
+		return (n2);
+}
